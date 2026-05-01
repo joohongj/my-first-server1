@@ -1,20 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Server</title>
+    <title>Things to do in Spring</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Indie+Flower&family=Love+Ya+Like+A+Sister&display=swap"
+        rel="stylesheet">
     <style>
-        /* Your CSS goes here */
+        html {
+            box-sizing: border-box;
+            height: 100%;
+
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+
+        #wrapper {
+            background: #faeed1dd;
+            width: 92%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: auto;
+            max-width: 1300px;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        div.intro {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding-left: 0;
+        }
+
+        .wrapper>* {
+            padding: 20px;
+        }
+
+        h1,
+        h2 {
+            font-family: "Amatic SC", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        /* different font */
+        h3,
+        p {
+            font-family: "Indie Flower", cursive;
+            font-weight: 400;
+            font-style: normal;
+            font-size: large;
+            display: flex;
+            justify-content: center;
+        }
+
+        .sectionOne img,
+        .sectionTwo img,
+        .sectionThree img,
+        .sectionFour img,
+        .sectionFive img,
+        .sectionSix img {
+            width: 350px;
+            border: 3px solid #9776768e;
+        }
+
+        .sectionOne img:hover,
+        .sectionTwo img:hover,
+        .sectionThree img:hover,
+        .sectionFour img:hover,
+        .sectionFive img:hover,
+        .sectionSix img:hover {
+            background-color: #77a63e88;
+        }
+
+        .sectionOne {
+            grid-column: 1;
+        }
+
+        .sectionTwo {
+            grid-column: 2;
+        }
+
+        .sectionThree {
+            grid-column: 3;
+        }
+
+        .sectionFour {
+            grid-column: 1;
+        }
+
+        .sectionFive {
+            grid-column: 2;
+        }
+
+        .sectionSix {
+            grid-column: 3;
+        }
+
+
+        #panel1,
+        #panel2,
+        #panel3,
+        #panel4,
+        #panel5,
+        #panel6 {
+            display: none;
+            /* hidden before click */
+            padding: 20px;
+            background-color: #e5eecc;
+            border: 1px solid #c3c3c3;
+        }
     </style>
 </head>
-<body>
-    <!-- Your HTML goes here -->
-      <h1>Welcome to my page</h1>
-  <p>This is my first server</p>
 
-    <script>
-        // Your javascript code (optional)
-    </script>
-</body>
+<body>
+
+    <body>
+        <div class="wrapper">
+            <main>
+                <div class="intro">
+                    <h1 class="head">What I love in Spring in New York</h1>
+                </div>
+
+                <div class="sectionOne">
+                    <div id="flip1">
+                        <h3>Camping</h3>
+                        <img src="images/1.png">
+                    </div>
+                    <div id="panel1">
+                        <p>This is one of most beautiful time to explore Upstate New York in Nature</p>
+                        <p>It's not too hot, but it's a bit chilly to start campfire as well</p>
+                    </div>
+                </div>
+
+                <div class="sectionTwo">
+                    <div id="flip2">
+                        <h3>Drinking</h3>
+                        <img src="images/2.png">
+                    </div>
+                    <div id="panel2">
+                        <p>Finally, it's spring!</p>
+                        <P>For those who love to stay inside during winter, it's time to go outside and catch up with
+                            friends over drinks</P>
+                        </P>
+
+                    </div>
+                </div>
+
+                <div class="sectionThree">
+                    <div id="flip3">
+                        <h3>Picnic</h3>
+                        <img src="images/3.png">
+                    </div>
+                    <div id="panel3">
+                        <p>Going to parks with our favourite snacks and drinks.</p>
+                        <p>& Get some Vitamin D: Sun</p>
+                    </div>
+                </div>
+
+
+                <div class="sectionFour">
+                    <div id="flip4">
+                        <h3>Reading & Writing</h3>
+                        <img src="images/4.png">
+                    </div>
+                    <div id="panel4">
+                        <p>spring also inspires me to start something new!</p>
+                        <p>Grab a new book or start a new chapter for a new character development</p>
+                    </div>
+                </div>
+
+                <div class="sectionFive">
+                    <div id="flip5">
+                        <h3>Planting</h3>
+                        <img src="images/5.png">
+                    </div>
+                    <div id="panel5">
+                        <p>My plants have suffered so much during COLD and DRY winter.</p>
+                        <p>Repot and let them to enjoy the sun</p>
+                    </div>
+                </div>
+
+                <div class="sectionSix">
+                    <div id="flip6">
+                        <h3>Flowers</h3>
+                        <img src="images/6.png">
+                    </div>
+                    <div id="panel6">
+                        <p>Now the green leaves and colorful flowers start to bloom. My neighbors love planting flowers
+                            every corner as well.</p>
+                        <p>It's the perfect time to enjoy all the colorful streets and parks.</p>
+                    </div>
+                </div>
+
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+                <script>
+                    $(document).ready(function () {
+                        $("#flip1").click(function () {
+                            $("#panel1").slideToggle("fast");
+                        });
+
+                        $("#flip2").click(function () {
+                            $("#panel2").slideToggle("fast");
+                        });
+                        $("#flip3").click(function () {
+                            $("#panel3").slideToggle("fast");
+                        });
+                        $("#flip4").click(function () {
+                            $("#panel4").slideToggle("fast");
+                        });
+                        $("#flip5").click(function () {
+                            $("#panel5").slideToggle("fast");
+                        });
+                        $("#flip6").click(function () {
+                            $("#panel6").slideToggle("fast");
+                        });
+
+
+                    });
+                </script>
+    </body>
+
 </html>
