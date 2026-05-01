@@ -1,9 +1,9 @@
 const fs = require('fs');
 
 const server = http.createServer(function (request, response) {
-  if (request.url === '/' || request.url === '/server.html') {
+  if (request.url === '/' || request.url === '/index.html') {
     try {
-      const data = fs.readFileSync('server.html');
+      const data = fs.readFileSync('index.html');
       response.writeHead(200, {
         'Content-Type': 'text/html'
       })
